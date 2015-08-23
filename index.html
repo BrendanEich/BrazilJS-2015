@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>JavaScript at 20</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>JavaScript at 20</h1>
+        <h2><a href="https://twitter.com/BrendanEich">Brendan Eich</a></h2>
+      </section>
+      <section data-bespoke-backdrop="backdrop backdrop--html5_supes" class="html5_supes undefined">
+        <h2>Standardization</h2>
+        <h3>"Things that are impossible just take longer." <small>- Hixie</small></h3>
+      </section>
+      <section>
+        <h3>1995: Eich recruited to Netscape</h3>
+        <h2>"Come and put Scheme in the browser!"</h2>
+      </section>
+      <section>
+        <h3>2015: John Carmack put <a href="http://racket-lang.org/">Racket</a> in Oculus VR</h3>
+      </section>
+      <section><blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/auradeluxe">@auradeluxe</a> <b>1/ I did something once in ten days. Still paying, lol. If <a href="https://twitter.com/ID_AA_Carmack">@ID_AA_Carmack</a> gets Racket (née PLT Scheme) as metaverse JS, revenge</b></p>&mdash; BrendanEich (@BrendanEich) <a href="https://twitter.com/BrendanEich/status/616747428616646656">July 2, 2015</a></blockquote>
+        <hr><blockquote class="twitter-tweet" data-conversation="none" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/auradeluxe">@auradeluxe</a> <a href="https://twitter.com/ID_AA_Carmack">@ID_AA_Carmack</a> <b>2/ sweet revenge on &quot;make it [JS] look like Java&quot; order givers at Netscape. I came to do &quot;Scheme in the browser&quot;.</b></p>&mdash; BrendanEich (@BrendanEich) <a href="https://twitter.com/BrendanEich/status/616747886454312960">July 2, 2015</a></blockquote>
+      </section>
+      <section><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/BrendanEich">@BrendanEich</a> <a href="https://twitter.com/ID_AA_Carmack">@ID_AA_Carmack</a> <a href="https://twitter.com/auradeluxe">@auradeluxe</a> <b>That order was the difference between a billion programmers and none :-).</b></p>&mdash; Marc Andreessen (@pmarca) <a href="https://twitter.com/pmarca/status/616755674387648512">July 2, 2015</a></blockquote></section>
+      <section>
+        <h3>What was it like to hack JS in 10 days?</h3>
+      </section>
+      <section><img src="images/bruce_campbell_army_of_darkness.jpg" height="430" width="375">
+        <h3>Painful.</h3>
+      </section>
+      <section><img src="images/beich1.gif" height="156" width="136">
+        <hr>
+        <ul>
+          <li>Morrissey?</li>
+          <li>Vince Vaughn?</li>
+        </ul>
+      </section>
+      <section><img src="images/swingers-vince.jpg" height="450" width="303"></section>
+      <section>
+        <h2>Java was the big Web VM</h2>
+        <h3>JavaScript was "little brother"</h3>
+      </section>
+      <section><img src="images/Java-Duke.jpg"></section>
+      <section>
+        <img style="position: relative; top: 0px; border: solid 1px lightgray;" class="transparent" src=images/applet-loading.png />
+        <img style="position: relative; top: -32px; left: -170px;" class="transparent" src=images/sbbod.gif />
+      </section>
+      <section>
+        <h3>Think back to 1995... what was on TV then?</h3>
+      </section>
+      <section><img src="images/1994-tv-shows.jpg" height="407" width="610"></section>
+      <section>
+        <h3>I had my big break that year...</h3>
+      </section>
+      <section><img src="images/friends_chandler_006.jpg" height="512" width="411"></section>
+      <section>
+        <h3>Even @pmarca roller-bladed then.</h3>
+      </section>
+      <section><img src="images/hackers_1995_rollerblading.jpg" height="300" width="504"></section>
+      <section>
+        <h3>I'd go to a real library to read Computer Science papers.</h3>
+      </section>
+      <section><img src="images/Margaret-Jacks-hall.jpg" height="512" width="439"></section>
+      <section>
+        <h3>John Doerr claims that even an idiot could have been a successful VC in the 1980s:</h3>
+        <h2>"All you had to do was hang around Margaret Jacks Hall."</h2>
+      </section>
+      <section>
+        <h3>Java's bytecode design influenced my work on JS.</h3>
+      </section>
+      <section><img src="images/Gosling-IR-paper.png" height="512" width="433"></section>
+      <section>
+        <h3>Java is <b>typed</b> (or statically typed) and has mostly-typed bytecode</h3>
+        <h3>JS is <b>untyped</b> (or dynamically typed)</h3>
+      </section>
+      <section><img src="images/Gosling-code-sample.png" height="400" width="742"></section>
+      <section>
+        <h3 class="bullet">So in <b>10 days</b> in May 1995, I wrote</h3>
+        <ul>
+          <li>A lexical scanner and parser for early JS</li>
+          <li>The parser emitted stack-machine bytecode</li>
+          <li>Which ran in a bytecode interpreter</li>
+          <li><code>Function.prototype.toString</code> bytecode decompiler</li>
+          <li>The standard library was poor</li>
+          <li><code>Array</code> was <code>Object</code> with <code>.length</code> property</li>
+          <li><code>Date</code> hand-ported <small>(h/t ksmith@netscape.com)</small> from <code>java.util.Date</code> </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Mistakes were made (WTFJS, WAT)</h3>
+      </section>
+      <section>
+        <h3>But enough was good that JS survived</h3>
+      </section>
+      <section>
+        <h3><a href="http://web.archive.org/web/19970414102538/http://whitetailbutte.com/">http://whitetailbutte.com/</a> case study</h3>
+        <h3>Early DOM mattered as much as JS</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Much progress since then</h2>
+        <ul>
+          <li><a href="http://asmjs.org/">asm.js</a> was discovered</li>
+          <li>ES6 is <a href="http://kangax.github.io/compat-table/es6/">all but done</a></li>
+          <li>typed arrays from WebGL are in ES6</li>
+          <li>typed objects coming in ES7</li>
+          <li><a href="http://www.typescriptlang.org/">TypeScript</a>, and now <a href="http://flowtype.org/">Flow</a></li>
+        </ul>
+      </section>
+      <section>
+        <pre><code class="language-javascript">class vector {
+  constructor(n) { this.arr = new Int32Array(n); }
+  sum() {
+    let la = this.arr;
+    let S = 0;
+    for (let i = la.length|0; (i=(i-1)|0) >= 0;)
+      S = (S + la[i|0])|0;
+    return S;
+  }
+}
+</code></pre>
+      </section>
+      <section><img src="images/java-vs-js-bytecode.png" height="384" width="512"></section>
+      <section>
+        <h3>JS is <b>untyped</b> (dynamically typed), <i>however:</i></h3>
+        <h3>asm.js is <b>typed</b> "bytecode" with deterministic performance</h3>
+      </section>
+      <section>
+        <h3>JS, a <b>dynamically typed</b> language, is often written with <b>latent static types</b></h3>
+        <h3><i>Especially when "written" by compilers</i></h3>
+      </section>
+      <section>
+        <h2 class="bullet">Compiling to JS is not new</h2>
+        <ul>
+          <li>Remember <a href="http://www.gwtproject.org/">GWT</a>, and <a href="http://www.openlaszlo.org/">OpenLaszlo</a> before it?</li>
+          <li><a href="http://coffeescript.org/">CoffeeScript</a>, now hundreds of compile-to-JS languages</li>
+          <li>(including <a href="http://dartlang.org/">Dart</a>)</li>
+          <li>See the <a href="https://shaunlebron.github.io/solar-system-of-js/">Solar System of JS</a></li>
+          <li>For C++ to JS, <a href="http://kripken.github.io/mloc_emscripten_talk/">Emscripten</a> by <a href="https://twitter.com/kripken">Alon Zakai</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>JS VMs compile to the metal</h2>
+        <h3>(just like Java but without declaring all types)</h3>
+      </section>
+      <section>
+        <h3>And the Java VM supports dynamic languages too:</h3>
+      </section>
+      <section><img src="images/java-7-as-dynlang-vm.jpg" height="480" width="640">
+        <p>from <a href="http://www.slideshare.net/nakov/java-7-new-features-by-mihail-stoynov-and-svetlin-nakov">Mikhail Stoynov and Svetlin Nakov</a></p>
+      </section>
+      <section>
+        <h2>The circle is now complete</h2><img src="images/obi-wan-and-vader.jpg" height="281" width="500">
+      </section>
+      <section>
+        <h2>WebAssembly</h2>
+      </section>
+      <section>
+        <ul>
+          <li><b>Consensus</b> from Apple/Google/Microsoft/Mozilla that the <a href="https://github.com/WebAssembly/design/">design</a> repo is approaching completeness</li>
+          <li>An <b>executable OCaml spec</b> and test suite in a new <a href="https://github.com/WebAssembly/spec/">spec</a> repo</li>
+          <li>Apple/Google/Mozilla are actively writing <b>prototype wasm support</b> in their engines' public repos</li>
+          <li>WebAssembly means <b>1VM</b> with 2 syntaxes, <b>.js and .wasm</b></li>
+        </ul>
+      </section>
+      <section>
+        <h2>What does WebAssembly look like?</h2>
+        <h3>It is hard to see binary</h3>
+      </section>
+      <section>
+        <pre><code class="language-javascript">enum class I32 : uint8_t {
+  LitPool, LitImm, GetLoc, GetGlo, SetLoc, SetGlo,
+  SLoad8, SLoadOff8, ULoad8, ULoadOff8,
+  SLoad16, SLoadOff16, ULoad16, ULoadOff16,
+  Load32, LoadOff32,
+  Store8, StoreOff8, Store16, StoreOff16, Store32, StoreOff32,
+  CallInt, CallInd, CallImp,
+  Cond, Comma,
+  FromF32, FromF64,
+  Neg, Add, Sub, Mul, SDiv, UDiv, SMod, UMod,
+  BitNot, BitOr, BitAnd, BitXor, Lsh, ArithRsh, LogicRsh,
+  Clz,
+  LogicNot,
+  EqI32, EqF32, EqF64, NEqI32, NEqF32, NEqF64,
+  SLeThI32, ULeThI32, LeThF32, LeThF64,
+  ...
+};
+</code></pre>
+      </section>
+      <section>
+        <pre><code class="language-javascript">switch (i32) {
+  ...
+  case I32::FromF32: ...(s, prec, ctx, Result::NoIsh, Ctx::Default, "~~"); break;
+  ak;
+  case I32::FromF64: ...(s, prec, ctx, Result::NoIsh, Ctx::Default, "~~"); break;
+  case I32::Neg:     ...(s, prec, ctx, Result::Intish, Ctx::Default, "-"); break;
+  case I32::BitNot:  ...(s, prec, ctx, Result::NoIsh, Ctx::ToI32, "~"); break;
+  ...
+}
+
+</code></pre>
+      </section>
+      <section>
+        <h2>ES6 well-covered by other speakers</h2>
+      </section>
+      <section>
+        <h2>ES6/2015, ES7/2016, ES8...</h2>
+        <h3>Rapid(er) standards release process</h3>
+      </section>
+      <section>
+        <h2>ES7 async functions</h2>
+      </section>
+      <section>
+        <pre><code class="language-javascript">function chainAnimationsPromise(elem, animations) {
+  let ret = null;
+  let p = currentPromise;
+  for (let anim of animations) {
+    p = p.then(function(val) {
+      ret = val;
+      return anim(elem);
+    });
+  }
+  return p.catch(e => { /* ignore and keep going */ })
+          .then(() => { return ret; });
+}
+</code></pre>
+      </section>
+      <section>
+        <pre><code class="language-javascript">function chainAnimationsGenerator(elem, animations) {
+  return spawn(function*() {
+    let ret = null;
+    try {
+      for (let anim of animations) {
+        ret = yield anim(elem);
+      }
+    } catch(e) { /* ignore and keep going */ }
+    return ret;
+  });
+}
+</code></pre>
+      </section>
+      <section>
+        <pre><code class="language-javascript">async function chainAnimationsAsync(elem, animations) {
+  let ret = null;
+  try {
+    for (let anim of animations) {
+      ret = await anim(elem);
+    }
+  } catch(e) { /* ignore and keep going */ }
+  return ret;
+}
+</code></pre>
+      </section>
+      <section>
+        <h2 class="bullet">More on board for ES7+</h2>
+        <ul>
+          <li><a href="https://github.com/johnmccutchan/ecmascript_simd/">SIMD</a></li>
+          <li><a href="https://github.com/nikomatsakis/typed-objects-explainer/">typed objects </a></li>
+          <li><a href="https://github.com/nikomatsakis/typed-objects-explainer/blob/master/valuetypes.md">value objects</a>, including</li>
+          <li><code>int64</code> and <code>uint64</code></li>
+          <li>user-defined operators and literals</li>
+          <li>async generators</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Hygienic macros: <a href="http://sweetjs.org/">Sweet.js</a></h2>
+      </section>
+      <section>
+        <h2>Demos</h2>
+      </section>
+      <section><img src="images/alwaysbetonjs.png" height="384" width="512"></section>
+      <section><img src="images/alwaysbetonjsandwasm.png" height="384" width="512"></section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
